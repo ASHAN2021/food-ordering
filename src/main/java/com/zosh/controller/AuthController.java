@@ -90,7 +90,7 @@ public class AuthController {
         String role = authorities.isEmpty()?null:authorities.iterator().next().getAuthority();
 
         JwtProvider jwtProvider = null;
-        String jwt=jwtProvider.generateToken(authentication);
+        String jwt= JwtProvider.generateToken(authentication);
 
         AuthResponse authResponse = new AuthResponse();
         authResponse.setJwt(jwt);
