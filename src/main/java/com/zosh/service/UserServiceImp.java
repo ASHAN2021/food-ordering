@@ -11,8 +11,9 @@ public class UserServiceImp implements UserService{
 
     @Autowired
     private UserRepository userRepository;
-
+    @Autowired
     private JwtProvider jwtProvider;
+
     @Override
     public User findUserByJwtToken(String jwt) throws Exception {
         String email = jwtProvider.getEmailFromJwtToken(jwt);
