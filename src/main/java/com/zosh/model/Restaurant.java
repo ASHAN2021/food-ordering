@@ -36,7 +36,7 @@ public class Restaurant {
     private String openingHours;
 
     @OneToMany(mappedBy = "restaurant",cascade = CascadeType.ALL,orphanRemoval = true)
-    private List<order> orders = new ArrayList<>();
+    private List<Order> orders = new ArrayList<>();
 
     @ElementCollection
     @Column(length = 1000)

@@ -7,7 +7,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.boot.autoconfigure.amqp.RabbitConnectionDetails;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +34,7 @@ public class User {
 
     @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "customer")
-    private List<order> orders = new ArrayList<>();
+    private List<Order> orders = new ArrayList<>();
 
     @ElementCollection
     private List<RestaurantDto> favourites = new ArrayList();
