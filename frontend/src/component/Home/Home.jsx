@@ -3,7 +3,7 @@ import './Home.css'
 import MultiItemCarousal from './MultiItemCarousal'
 import RestaurantCard from '../Restaurant/RestaurantCard'
 
-const restaurant=[1,1,1,1,1,1,1,1,1,1]
+const restaurant=[1,1,1,1,1,1,1,1,1]
 const Home = () => {
   return (
     <div className='pb-10 '>
@@ -24,7 +24,7 @@ const Home = () => {
             <p className='text-2xl font-semibold text-gray-400 py-3 pb-10'>Top Meels</p>
             <MultiItemCarousal/>
         </section>
-        <section className='px-5 lg:px-20 bg-black'>
+        <section className='px-5 lg:px-20 bg-black pt-10'>
             <h1 className='text-2xl font-semibold text-gray-400 py-3'>Order From Our Handpicked Favorites</h1>
             <div className='flex flex-wrap items-center justify-around gap-4'>
                 {
