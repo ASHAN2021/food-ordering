@@ -4,8 +4,11 @@ import SearchIcon from '@mui/icons-material/Search';
 import { pink } from '@mui/material/colors';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './Navbar.css'
+import Person2Icon from '@mui/icons-material/Person2';
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
+  const navigate = useNavigate();
   return (
     <Box className='px-5 sticky top-0 z-50 py-[.8rem] bg-[#E6B325] lg:px-20 flex justify-between'>
 
@@ -21,7 +24,11 @@ Food Master
   </IconButton>
 </div>
 <div>
-  <Avatar sx={{bgcolor:"white",color:pink.A400}}>A</Avatar>
+  {false?<Avatar sx={{bgcolor:"white",color:pink.A400}}>A</Avatar>:
+  <IconButton onClick={()=>navigate("/account/login")}>
+    <Person2Icon/>
+  </IconButton>
+  }
 </div>
 <div>
   <IconButton>

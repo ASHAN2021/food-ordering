@@ -18,7 +18,17 @@ const initialValues={
 //   pincode:Yup.required('pincode  is Required'),
 //   city:Yup.string().required('City is Required'),
 // })
-
+export const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  outline:"none",
+  boxShadow: 24,
+  p: 4,
+};
 
 const items=[1,1];
 const Cart = () => {
@@ -36,17 +46,7 @@ const Cart = () => {
     }
     
 
-    const style = {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 400,
-        bgcolor: 'background.paper',
-        outline:"none",
-        boxShadow: 24,
-        p: 4,
-      };
+
   return (
     <>
         <main className='lg:flex justify-between'>
@@ -138,20 +138,6 @@ const Cart = () => {
               />
           </Grid>
           <Grid item xs={12}>
-              <Field
-                as={TextField}
-                name="state"
-                label="state"
-                variant="outlined"
-                fullWidth
-                // error={!ErrorMessage("streetAddress")}
-                // helperText={
-                //   <ErrorMessage>
-                //     {(msg)=><span className='text-red-600' >{msg}</span>}
-                //   </ErrorMessage>
-                // }
-                
-              />
           </Grid>
           <Grid item xs={12}>
               <Field

@@ -18,7 +18,7 @@ const menu=[
         icon: <FavoriteIcon />,
     },
     {
-        title: 'Addresses',
+        title: 'Address',
         icon: <HomeIcon />,
     },
     {
